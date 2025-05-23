@@ -1,0 +1,111 @@
+/* #parent,#child,#descendant{
+    margin: 16px;
+    padding: 16px;
+    border: 3px solid black;
+    border-radius: 8px;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#parent{
+    background-color: #673ab7;
+}
+#child{
+    background-color: #448aff;
+}
+#descendant{
+    background-color: #ff9800;
+} */
+/* body{
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ .output{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+ }
+ .color-palete{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(40px,1fr));
+}
+.color-palete .item{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: transform 250ms ease-in-out;
+}
+
+.color-palete .item:hover{
+    transform: scale(1.1);
+} */
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 12px;
+    list-style: none;
+}
+
+.lightbox__image {
+    width: 300px;
+    cursor: pointer;
+}
+
+.lightbox {
+    display: flex;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    
+}
+
+
+
+.lightbox__image:hover {
+  transform: scale(1.03);
+}
+
+.lightbox__content>img{
+    width: 100%;
+    height: 500px;
+}
+
+.lightbox__overlay {
+    width: 1000px;
+    height: 500px;
+    background-color: none;
+}
+.js-lightbox, .lightbox__button{
+    animation-name: animation;
+    animation-duration: 0.3s;
+    animation-iteration-count: inherit;
+}
+
+.lightbox__button{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+/* body{
+    background-color: rgb(36, 33, 33);
+} */
+@keyframes animation {
+    
+    10%{
+        transform: scale(0.93);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
